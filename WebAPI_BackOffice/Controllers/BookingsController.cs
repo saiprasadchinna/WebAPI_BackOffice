@@ -25,6 +25,12 @@ namespace WebAPI_BackOffice.Controllers
             return bookingsRequest.AddBookingDetails(Name, Address);
         }
 
+        [HttpGet("doOperations")]
+        public bool DoOperations(string Type, int Id)
+        {
+            return bookingsRequest.DoOperations(Type, Id);
+        }
+
         [NonAction]
         public string DataTableToJSONWithJSONNet(DataTable table)
         {
